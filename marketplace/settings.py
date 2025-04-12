@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-_qqcv6!huk2hj!e$&meiq5nh@)a%#ev5e!=zsg1u_=y+sl=88l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
  
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mabira1.onrender.com']
 
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
