@@ -21,7 +21,7 @@ pipenv==2024.4.0
 platformdirs==4.3.6
 psycopg==3.2.6
 psycopg2-binary==2.9.10
-pypiwin32==223
+
 python-dateutil==2.9.0.post0
 
 PyYAML==6.0.2
