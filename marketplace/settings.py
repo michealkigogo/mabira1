@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-_qqcv6!huk2hj!e$&meiq5nh@)a%#ev5e!=zsg1u_=y+sl=88l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
  
-ALLOWED_HOSTS = ["https://mabira1.onrender.com"]
+ALLOWED_HOSTS = [ 'mabira1.onrender.com',  
+    'localhost',
+    '127.0.0.1']
 
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
@@ -134,7 +136,9 @@ TIME_ZONE = 'Asia/Kolkata'
 USE_I18N = True
 
 USE_TZ = True
-
+SECURE_SSL_REDIRECT = True  
+SESSION_COOKIE_SECURE = True  
+CSRF_COOKIE_SECURE = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
