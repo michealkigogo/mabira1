@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -94,16 +96,15 @@ WSGI_APPLICATION = 'marketplace.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',  # Use PostgreSQL as the database engine
-        'NAME': 'mabira_shop_data',                    # The name of your PostgreSQL database
-        'USER': 'mabira_shop_data_user',                       # The PostgreSQL username
-        'PASSWORD': 'LTs8iEz9NTbsfimr0daSamGCDeQvtDcL',               # The PostgreSQL password
-        'HOST': 'dpg-cvf95at2ng1s73d3fqe0-a',                       # Or the IP address of your PostgreSQL server (e.g., 'localhost' for local database)
-        'PORT': '5432',                            # Default port for PostgreSQL
-    }
+
+    DATABASES = {
+    'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL'),  
+        conn_max_age=600,
+        ssl_require=True  
+    )
 }
+
 
 
 
