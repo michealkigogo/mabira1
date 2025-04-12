@@ -97,13 +97,18 @@ WSGI_APPLICATION = 'marketplace.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL'),
-        conn_max_age=600,
-        ssl_require=True
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DB_NAME', 'mabira_shop_data'),
+        'USER': os.getenv('DB_USER', 'mabira_shop_data_user'),
+        'PASSWORD': os.getenv('DB_PASSWORD', ''),
+        'HOST': os.getenv('DB_HOST', ''),
+        'PORT': os.getenv('DB_PORT', '5432'),
+        'OPTIONS': {
+            'sslmode': 'require',
+        },
+    }
 }
-
 
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
