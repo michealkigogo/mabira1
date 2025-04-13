@@ -101,8 +101,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('DB_NAME', 'mabira_shop_data'),
         'USER': os.getenv('DB_USER', 'mabira_shop_data_user'),
-        'PASSWORD': os.getenv('DB_PASSWORD', ''),
-        'HOST': os.getenv('DB_HOST', ''),
+        'PASSWORD': os.getenv('DB_PASSWORD', 'LTs8iEz9NTbsfimr0daSamGCDeQvtDcL'),
+        'HOST': os.getenv('DB_HOST', 'dpg-cvf95at2ng1s73d3fqe0-a'),
         'PORT': os.getenv('DB_PORT', '5432'),
         'OPTIONS': {
             'sslmode': 'require',
