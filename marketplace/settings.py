@@ -66,7 +66,7 @@ WSGI_APPLICATION = 'marketplace.wsgi.application'
 # Database
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL'),
+        default=os.environ.get('postgresql://mabira_shop_data_user:LTs8iEz9NTbsfimr0daSamGCDeQvtDcL@dpg-cvf95at2ng1s73d3fqe0-a/mabira_shop_data'),
         conn_max_age=600,
         conn_health_checks=True,
     )
